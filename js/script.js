@@ -60,8 +60,7 @@ btnMusica.addEventListener("click", () => {
 // Cambia la fecha por la de tu graduación
 // ===============================
 
-const fechaEvento =
-new Date("December 20, 2026 19:00:00").getTime();
+const fechaEvento = new Date("2026-07-19T20:00:00").getTime();
 
 const dias = document.getElementById("dias");
 const horas = document.getElementById("horas");
