@@ -86,6 +86,112 @@ body{
     margin-bottom:35px;
 }
 
+
+/*=========================
+    PORTADA ELEGANTE
+=========================*/
+
+.birrete{
+
+    font-size:70px;
+    color:var(--dorado);
+
+    margin-bottom:20px;
+
+    animation:flotar 3s infinite ease-in-out;
+
+}
+
+.titulo{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:72px;
+
+    color:var(--dorado);
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 20px rgba(212,175,55,.3);
+
+}
+
+.prefijo{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:300;
+
+    letter-spacing:8px;
+
+    margin-bottom:8px;
+
+}
+
+.nombre{
+
+    font-family:'Playfair Display',serif;
+
+    color:white;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.carrera{
+
+    color:#ECECEC;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.universidad{
+
+    color:var(--dorado);
+
+    font-size:20px;
+
+    margin-bottom:40px;
+
+    letter-spacing:2px;
+
+}
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+
+
+
 /* ==========================
    BOTÓN PRINCIPAL
 ========================== */
@@ -374,4 +480,84 @@ footer{
 footer p{
     margin:8px 0;
     font-size:16px;
+}
+
+/* =====================================
+   RESPONSIVE PARA CELULARES
+===================================== */
+
+@media(max-width:768px){
+
+    .birrete{
+
+        font-size:50px;
+
+    }
+
+    .titulo{
+
+        font-size:44px;
+
+        letter-spacing:2px;
+
+    }
+
+    .prefijo{
+
+        font-size:20px;
+
+        letter-spacing:3px;
+
+    }
+
+    .nombre{
+
+        font-size:30px;
+
+    }
+
+    .carrera{
+
+        font-size:18px;
+
+    }
+
+    .universidad{
+
+        font-size:16px;
+
+        line-height:1.6;
+
+        padding:0 15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .titulo{
+
+        font-size:34px;
+
+    }
+
+    .nombre{
+
+        font-size:24px;
+
+    }
+
+    .carrera{
+
+        font-size:16px;
+
+    }
+
+    .universidad{
+
+        font-size:14px;
+
+    }
+
 }
