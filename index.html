@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invitación de Graduación | Ing. Sergio Canaviri Félix</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Música -->
+    <audio id="musica" loop>
+        <source src="audio/musica.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Pantalla de bienvenida -->
+    <section id="inicio" class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="contenido">
+
+            <h3>Te invito a celebrar mi</h3>
+
+            <h1>GRADUACIÓN</h1>
+
+            <h2> Ing. Sergio Canaviri Félix</h2>
+
+            <p>Ingeniería de Sistemas</p>
+
+            <button id="btnAbrir">
+                <i class="fa-solid fa-envelope-open"></i>
+                Abrir Invitación
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Contenido principal -->
+
+    <main id="contenido" style="display:none;">
+
+        <section class="mensaje">
+
+            <h2>¡Bienvenidos!</h2>
+
+            <p>
+
+                Después de años de esfuerzo, dedicación y aprendizaje,
+                llegó el momento de celebrar uno de los logros más importantes
+                de mi vida.
+
+            </p>
+
+            <p>
+
+                Será un honor contar con tu presencia en este día tan especial.
+
+            </p>
+
+        </section>
+
+        <!-- Cuenta regresiva -->
+
+        <section class="contador">
+
+            <h2>Faltan</h2>
+
+            <div class="tiempo">
+
+                <div>
+
+                    <span id="dias">00</span>
+
+                    <small>Días</small>
+
+                </div>
+
+                <div>
+
+                    <span id="horas">00</span>
+
+                    <small>Horas</small>
+
+                </div>
+
+                <div>
+
+                    <span id="minutos">00</span>
+
+                    <small>Minutos</small>
+
+                </div>
+
+                <div>
+
+                    <span id="segundos">00</span>
+
+                    <small>Segundos</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Información -->
+
+        <section class="evento">
+
+            <h2>Detalles del Evento</h2>
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>Fecha</h3>
+
+                <p>19 de Julio de 2026</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Hora</h3>
+
+                <p>20:00</p>
+
+            </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Lugar</h3>
+
+            <p>Mi domicilio particular</p>
+
+            <small>
+                San Pedro, Santa Cruz - Bolivia
+            </small>
+
+            <br><br>
+
+            <a href="https://www.google.com/maps?q=-16.823253,-63.483985"
+            target="_blank">
+
+                <i class="fa-solid fa-map-location-dot"></i>
+                Cómo llegar
+
+            </a>
+
+        </div>
+
+        </section>
+
+        <!-- Galería -->
+
+        <section class="galeria">
+
+            <h2>Mis recuerdos</h2>
+
+            <div class="imagenes">
+
+                <img src="img/foto1.jpg">
+
+                <img src="img/foto2.jpg">
+
+                <img src="img/foto3.jpg">
+
+                <img src="img/foto4.jpg">
+
+                <img src="img/foto5.jpg">
+
+                <img src="img/foto6.jpg">
+
+            </div>
+
+        </section>
+    </section>
+
+        <!-- Confirmación -->
+
+    <section class="confirmacion">
+
+        <h2>Confirma tu asistencia</h2>
+
+        <p>
+            Tu presencia hará este momento aún más especial.
+        </p>
+        <a href="https://wa.me/59176965520?text=Hola%20Sergio,%20con%20mucho%20gusto%20confirmo%20mi%20asistencia%20a%20tu%20graduación.%20¡Muchas%20felicidades!"
+        target="_blank"
+        class="btn-whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Confirmar por WhatsApp
+
+        </a>
+
+    </section>
+<!-- <a href="https://wa.me/59176965520?text=Hola%20Sergio%20%F0%9F%91%8B%0A%0AConfirmo%20mi%20asistencia%20a%20tu%20graduaci%C3%B3n.%0A%0ANombre%3A%20%0AN%C3%BAmero%20de%20personas%3A%20%0A%0A%C2%A1Muchas%20felicidades!%20%F0%9F%8E%93"
+   target="_blank"
+   class="btn-whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+    Confirmar por WhatsApp
+
+</a> -->
+
+
+    
+
+        <!-- Agradecimiento -->
+
+        <section class="gracias">
+
+            <h2>¡Gracias!</h2>
+
+            <p>
+
+                Gracias por formar parte de mi historia y acompañarme
+                en uno de los momentos más importantes de mi vida.
+
+            </p>
+
+            <h3>¡Te espero!</h3>
+
+        </section>
+
+    </main>
+
+    <!-- Botón Música -->
+
+    <button id="btnMusica" class="musica">
+
+        <i class="fa-solid fa-music"></i>
+
+    </button>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            Ing. Sergio Canaviri Félix © 2026
+
+        </p>
+
+        <p>
+
+            Ingeniería de Sistemas
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
