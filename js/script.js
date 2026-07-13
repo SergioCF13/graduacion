@@ -11,6 +11,7 @@ const inicio = document.getElementById("inicio");
 const musica = document.getElementById("musica");
 const btnMusica = document.getElementById("btnMusica");
 
+
 // ===============================
 // Abrir invitación
 // ===============================
@@ -18,12 +19,11 @@ const btnMusica = document.getElementById("btnMusica");
 btnAbrir.addEventListener("click", () => {
 
     inicio.style.display = "none";
-
     contenido.style.display = "block";
 
-    musica.play().catch(() => {
-        console.log("El navegador bloqueó la reproducción automática.");
-    });
+    musica.play();
+
+    reproduciendo = true;
 
 });
 
@@ -31,7 +31,7 @@ btnAbrir.addEventListener("click", () => {
 // Botón Música
 // ===============================
 
-let reproduciendo = true;
+let reproduciendo = false;
 
 btnMusica.addEventListener("click", () => {
 
