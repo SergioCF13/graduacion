@@ -1,7 +1,4 @@
-// ===============================
-// INVITACIÓN DE GRADUACIÓN
-// Sergio Canaviri Félix
-// ===============================
+
 
 // Elementos
 const btnAbrir = document.getElementById("btnAbrir");
@@ -265,12 +262,7 @@ const anio = new Date().getFullYear();
 
 footer.innerHTML += `<p>© ${anio} - Todos los derechos reservados</p>`;
 
-// ========================================
-// Fin Parte 2
-// ========================================
-// ==========================================
-// PARTE 3 - EFECTOS PREMIUM
-// ==========================================
+
 
 // Mensaje al llegar al final de la página
 
@@ -359,12 +351,9 @@ console.log(
 
 const fotos = [
 
-    "img/foto1.jpg",
-    "img/foto2.jpg",
-    "img/foto3.jpg",
-    "img/foto4.jpg",
-    "img/foto5.jpg",
-    "img/foto6.jpg"
+    "img/portada.jpg",
+    "img/sergio.jpg",
+    "img/galeria.jpg",
 
 ];
 

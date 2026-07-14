@@ -13,13 +13,17 @@
 }
 
 /* ==========================
-   ESTILOS GENERALES
+   ESTILOS GENERALES (CORREGIDOS)
 ========================== */
 
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Aplicamos tipografía sin interferir con las clases de Font Awesome */
+body, html, p, h1, h2, h3, h4, h5, h6, span, a, button, small {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -40,7 +44,7 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 100vh; /* Cambiado a min-height para evitar desbordes si el contenido es alto */
+    min-height: 100vh; /* Permite estirarse en pantallas cortas */
     background: linear-gradient(rgba(11, 31, 58, .8),
                                rgba(11, 31, 58, .8)),
                 url("../img/portada.jpg") center/cover no-repeat;
@@ -68,26 +72,25 @@ body {
     margin: auto;
 }
 
-/* Elementos de la Portada Elegante */
+/* Elementos de la Portada */
 .birrete {
-    font-size: clamp(50px, 8vw, 80px); /* Tamaño fluido */
+    font-size: clamp(50px, 8vw, 80px); /* Escalado fluido */
     color: var(--dorado);
     margin-bottom: 15px;
     animation: flotar 3s infinite ease-in-out;
 }
 
 .prefijo {
+    font-family: 'Playfair Display', serif;
     color: white;
-    font-size: clamp(16px, 3vw, 24px);
-    font-weight: 300;
-    letter-spacing: clamp(4px, 1vw, 8px);
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .titulo {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(38px, 7vw, 72px); /* Se adapta desde móvil hasta monitor */
+    font-size: clamp(38px, 7vw, 72px);
     color: var(--dorado);
     letter-spacing: clamp(2px, 0.8vw, 6px);
     margin-bottom: 15px;
@@ -198,7 +201,7 @@ body {
 }
 
 .tiempo div {
-    width: clamp(100px, 22vw, 130px); /* Ajuste dinámico de los cuadros */
+    width: clamp(100px, 22vw, 130px);
     height: clamp(100px, 22vw, 130px);
     background: #fff;
     color: var(--azul);
@@ -224,7 +227,7 @@ body {
 }
 
 /* ==========================
-   DETALLES DEL EVENTO
+   DETALLES DEL EVENTO (GRID)
 ========================== */
 
 .evento {
@@ -240,7 +243,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Contenedor responsivo para las tarjetas */
 .evento-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
