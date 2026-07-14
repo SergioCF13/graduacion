@@ -2,562 +2,469 @@
    FUENTE Y VARIABLES
 ========================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-:root{
-    --azul:#0B1F3A;
-    --dorado:#D4AF37;
-    --blanco:#ffffff;
-    --gris:#f5f5f5;
-    --oscuro:#111111;
+:root {
+    --azul: #0B1F3A;
+    --dorado: #D4AF37;
+    --blanco: #ffffff;
+    --gris: #f5f5f5;
+    --oscuro: #111111;
 }
 
 /* ==========================
    ESTILOS GENERALES
 ========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:var(--gris);
-    color:var(--oscuro);
-    overflow-x:hidden;
+body {
+    background: var(--gris);
+    color: var(--oscuro);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================
-   HERO
+   HERO / PORTADA ELEGANTE
 ========================== */
 
-.hero{
-    width:100%;
-    height:100vh;
-    background:linear-gradient(rgba(11,31,58,.75),
-                               rgba(11,31,58,.75)),
-               url("../img/portada.jpg") center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
+.hero {
+    width: 100%;
+    min-height: 100vh; /* Cambiado a min-height para evitar desbordes si el contenido es alto */
+    background: linear-gradient(rgba(11, 31, 58, .8),
+                               rgba(11, 31, 58, .8)),
+                url("../img/portada.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.25);
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .25);
+    z-index: 1;
 }
 
-.contenido{
-    position:relative;
-    z-index:10;
-    color:#fff;
-    padding:20px;
+.contenido {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
 }
 
-.contenido h3{
-    font-size:28px;
-    font-weight:300;
-    margin-bottom:15px;
+/* Elementos de la Portada Elegante */
+.birrete {
+    font-size: clamp(50px, 8vw, 80px); /* Tamaño fluido */
+    color: var(--dorado);
+    margin-bottom: 15px;
+    animation: flotar 3s infinite ease-in-out;
 }
 
-.contenido h1{
-    font-size:70px;
-    color:var(--dorado);
-    letter-spacing:4px;
-    margin-bottom:15px;
+.prefijo {
+    color: white;
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 300;
+    letter-spacing: clamp(4px, 1vw, 8px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.contenido h2{
-    font-size:38px;
-    margin-bottom:10px;
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 72px); /* Se adapta desde móvil hasta monitor */
+    color: var(--dorado);
+    letter-spacing: clamp(2px, 0.8vw, 6px);
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, .3);
+    line-height: 1.2;
 }
 
-.contenido p{
-    font-size:22px;
-    margin-bottom:35px;
+.nombre {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-
-/*=========================
-    PORTADA ELEGANTE
-=========================*/
-
-.birrete{
-
-    font-size:70px;
-    color:var(--dorado);
-
-    margin-bottom:20px;
-
-    animation:flotar 3s infinite ease-in-out;
-
+.carrera {
+    color: #ECECEC;
+    font-size: clamp(18px, 3.5vw, 24px);
+    margin-bottom: 10px;
+    font-weight: 300;
 }
 
-.titulo{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:72px;
-
-    color:var(--dorado);
-
-    letter-spacing:6px;
-
-    margin-bottom:20px;
-
-    text-shadow:0 0 20px rgba(212,175,55,.3);
-
+.universidad {
+    color: var(--dorado);
+    font-size: clamp(14px, 2.5vw, 20px);
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+    line-height: 1.4;
 }
 
-.prefijo{
-
-    color:white;
-
-    font-size:28px;
-
-    font-weight:300;
-
-    letter-spacing:8px;
-
-    margin-bottom:8px;
-
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
-
-.nombre{
-
-    font-family:'Playfair Display',serif;
-
-    color:white;
-
-    font-size:48px;
-
-    margin-bottom:20px;
-
-}
-
-.carrera{
-
-    color:#ECECEC;
-
-    font-size:24px;
-
-    margin-bottom:10px;
-
-}
-
-.universidad{
-
-    color:var(--dorado);
-
-    font-size:20px;
-
-    margin-bottom:40px;
-
-    letter-spacing:2px;
-
-}
-
-@keyframes flotar{
-
-    0%{
-
-        transform:translateY(0px);
-
-    }
-
-    50%{
-
-        transform:translateY(-12px);
-
-    }
-
-    100%{
-
-        transform:translateY(0px);
-
-    }
-
-}
-
-
-
-
 
 /* ==========================
    BOTÓN PRINCIPAL
 ========================== */
 
-#btnAbrir{
-    background:var(--dorado);
-    color:#fff;
-    border:none;
-    padding:15px 35px;
-    font-size:18px;
-    border-radius:50px;
-    cursor:pointer;
-    transition:.3s;
+#btnAbrir {
+    background: var(--dorado);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: clamp(16px, 2vw, 18px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform .3s, background-color .3s;
+    box-shadow: 0 4px 15px rgba(212,175,55,.3);
 }
 
-#btnAbrir:hover{
-    transform:scale(1.05);
-    background:#b89224;
+#btnAbrir:hover {
+    transform: scale(1.05);
+    background: #b89224;
+}
+
+#btnAbrir:active {
+    transform: scale(0.98);
 }
 
 /* ==========================
    MENSAJE
 ========================== */
 
-.mensaje{
-    max-width:900px;
-    margin:80px auto;
-    padding:20px;
-    text-align:center;
+.mensaje {
+    max-width: 800px;
+    margin: clamp(40px, 8vw, 80px) auto;
+    padding: 0 24px;
+    text-align: center;
 }
 
-.mensaje h2{
-    font-size:40px;
-    color:var(--azul);
-    margin-bottom:20px;
+.mensaje h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    color: var(--azul);
+    margin-bottom: 20px;
 }
 
-.mensaje p{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:15px;
+.mensaje p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.8;
 }
 
 /* ==========================
    CONTADOR
 ========================== */
 
-.contador{
-    background:var(--azul);
-    color:#fff;
-    padding:70px 20px;
-    text-align:center;
+.contador {
+    background: var(--azul);
+    color: #fff;
+    padding: clamp(40px, 8vw, 70px) 20px;
+    text-align: center;
 }
 
-.contador h2{
-    font-size:42px;
-    margin-bottom:40px;
-    color:var(--dorado);
+.contador h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 30px;
+    color: var(--dorado);
 }
 
-.tiempo{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+.tiempo {
+    display: flex;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.tiempo div{
-    width:120px;
-    height:120px;
-    background:#fff;
-    color:var(--azul);
-    border-radius:15px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.tiempo div {
+    width: clamp(100px, 22vw, 130px); /* Ajuste dinámico de los cuadros */
+    height: clamp(100px, 22vw, 130px);
+    background: #fff;
+    color: var(--azul);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
 
-.tiempo span{
-    font-size:42px;
-    font-weight:bold;
+.tiempo span {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: bold;
+    line-height: 1;
 }
 
-.tiempo small{
-    margin-top:10px;
-    font-size:16px;
+.tiempo small {
+    margin-top: 8px;
+    font-size: clamp(12px, 2vw, 15px);
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 /* ==========================
    DETALLES DEL EVENTO
 ========================== */
 
-.evento{
-    padding:80px 20px;
-    text-align:center;
+.evento {
+    padding: clamp(40px, 8vw, 80px) 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.evento h2{
-    font-size:42px;
-    color:var(--azul);
-    margin-bottom:40px;
+.evento h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--azul);
+    margin-bottom: 40px;
 }
 
-.card{
-    max-width:320px;
-    margin:20px auto;
-    background:#fff;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+/* Contenedor responsivo para las tarjetas */
+.evento-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 0 10px;
 }
 
-.card i{
-    font-size:45px;
-    color:var(--dorado);
-    margin-bottom:20px;
+.card {
+    width: 100%;
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: transform .3s;
 }
 
-.card h3{
-    margin-bottom:10px;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.card p{
-    margin-bottom:15px;
+.card i {
+    font-size: 45px;
+    color: var(--dorado);
+    margin-bottom: 20px;
 }
 
-.card a{
-    text-decoration:none;
-    color:#fff;
-    background:var(--azul);
-    padding:10px 20px;
-    border-radius:30px;
-    display:inline-block;
-    transition:.3s;
+.card h3 {
+    font-size: 22px;
+    color: var(--azul);
+    margin-bottom: 12px;
 }
 
-.card a:hover{
-    background:var(--dorado);
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
 }
+
+.card a {
+    text-decoration: none;
+    color: #fff;
+    background: var(--azul);
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background-color .3s, transform .3s;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card a:hover {
+    background: var(--dorado);
+    transform: scale(1.03);
+}
+
 /* ==========================
    GALERÍA
 ========================== */
 
-.galeria{
-    padding:80px 20px;
-    background:#f8f8f8;
-    text-align:center;
+.galeria {
+    padding: clamp(40px, 8vw, 80px) 20px;
+    background: #f8f8f8;
+    text-align: center;
 }
 
-.galeria h2{
-    font-size:42px;
-    color:var(--azul);
-    margin-bottom:40px;
+.galeria h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--azul);
+    margin-bottom: 40px;
 }
 
-.imagenes{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.imagenes {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.imagenes img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:15px;
-    cursor:pointer;
-    transition:.4s;
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+.imagenes img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform .4s, box-shadow .4s;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 
-.imagenes img:hover{
-    transform:scale(1.05);
+.imagenes img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 /* ==========================
    CONFIRMACIÓN
 ========================== */
 
-.confirmacion{
-    padding:80px 20px;
-    background:var(--azul);
-    color:#fff;
-    text-align:center;
+.confirmacion {
+    padding: clamp(50px, 8vw, 80px) 20px;
+    background: var(--azul);
+    color: #fff;
+    text-align: center;
 }
 
-.confirmacion h2{
-    font-size:42px;
-    color:var(--dorado);
-    margin-bottom:20px;
+.confirmacion h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--dorado);
+    margin-bottom: 20px;
 }
 
-.confirmacion p{
-    font-size:20px;
-    margin-bottom:35px;
+.confirmacion p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin-bottom: 35px;
 }
 
-.btn-whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    padding:16px 35px;
-    border-radius:50px;
-    font-size:20px;
-    transition:.3s;
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 600;
+    transition: transform .3s, background-color .3s;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, .3);
 }
 
-.btn-whatsapp:hover{
-    transform:scale(1.05);
-    background:#1ebd5a;
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    background: #1ebd5a;
 }
 
-.btn-whatsapp i{
-    margin-right:10px;
+.btn-whatsapp i {
+    margin-right: 10px;
 }
 
 /* ==========================
    AGRADECIMIENTO
 ========================== */
 
-.gracias{
-    padding:90px 20px;
-    text-align:center;
-    background:#fff;
+.gracias {
+    padding: clamp(50px, 8vw, 90px) 20px;
+    text-align: center;
+    background: #fff;
 }
 
-.gracias h2{
-    font-size:45px;
-    color:var(--azul);
-    margin-bottom:20px;
+.gracias h2 {
+    font-size: clamp(32px, 5vw, 45px);
+    color: var(--azul);
+    margin-bottom: 20px;
 }
 
-.gracias p{
-    max-width:850px;
-    margin:auto;
-    font-size:20px;
-    line-height:1.8;
+.gracias p {
+    max-width: 800px;
+    margin: auto;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.8;
+    color: #444;
 }
 
-.gracias h3{
-    margin-top:40px;
-    font-size:34px;
-    color:var(--dorado);
+.gracias h3 {
+    margin-top: 40px;
+    font-size: clamp(24px, 4vw, 34px);
+    color: var(--dorado);
+    font-family: 'Playfair Display', serif;
 }
 
 /* ==========================
    BOTÓN DE MÚSICA
 ========================== */
 
-.musica{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:60px;
-    height:60px;
-    border:none;
-    border-radius:50%;
-    background:var(--dorado);
-    color:#fff;
-    font-size:24px;
-    cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    transition:.3s;
-    z-index:999;
+.musica {
+    position: fixed;
+    right: clamp(15px, 4vw, 25px);
+    bottom: clamp(15px, 4vw, 25px);
+    width: clamp(50px, 12vw, 60px);
+    height: clamp(50px, 12vw, 60px);
+    border: none;
+    border-radius: 50%;
+    background: var(--dorado);
+    color: #fff;
+    font-size: clamp(18px, 4vw, 24px);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    transition: transform .4s;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.musica:hover{
-    transform:rotate(360deg) scale(1.1);
+.musica:hover {
+    transform: rotate(360deg) scale(1.1);
 }
 
 /* ==========================
    FOOTER
 ========================== */
 
-footer{
-    background:var(--azul);
-    color:#fff;
-    text-align:center;
-    padding:30px;
+footer {
+    background: var(--azul);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-footer p{
-    margin:8px 0;
-    font-size:16px;
+footer p {
+    margin: 8px 0;
 }
 
 /* =====================================
-   RESPONSIVE PARA CELULARES
+   SOPORTE PARA PANTALLAS TÁCTILES Y MENORES
 ===================================== */
-
-@media(max-width:768px){
-
-    .birrete{
-
-        font-size:50px;
-
+@media (hover: none) {
+    /* Desactiva efectos hover agresivos en móviles para evitar bugs táctiles */
+    .imagenes img:hover, .card:hover {
+        transform: none;
     }
-
-    .titulo{
-
-        font-size:44px;
-
-        letter-spacing:2px;
-
-    }
-
-    .prefijo{
-
-        font-size:20px;
-
-        letter-spacing:3px;
-
-    }
-
-    .nombre{
-
-        font-size:30px;
-
-    }
-
-    .carrera{
-
-        font-size:18px;
-
-    }
-
-    .universidad{
-
-        font-size:16px;
-
-        line-height:1.6;
-
-        padding:0 15px;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    .titulo{
-
-        font-size:34px;
-
-    }
-
-    .nombre{
-
-        font-size:24px;
-
-    }
-
-    .carrera{
-
-        font-size:16px;
-
-    }
-
-    .universidad{
-
-        font-size:14px;
-
-    }
-
 }
